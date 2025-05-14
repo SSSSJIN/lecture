@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	let books = new Array()
+	books.push("홍길동전")
+	books.push("백설공주")
+	books.push("피터팬")
+	books.push("신데렐라")
+	
+	for(let book of books) {
+		document.write(book + '<br>')
+	}
+	document.write('<hr>')
+	
+	books.forEach(function(element, index, books) {
+		document.write(index + '번째 책제목 : ' + element + '<br>')
+	})
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

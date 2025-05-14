@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body {
+		font-size : 25pt;
+	}
+</style>
+<script>
+	let array = [10, '20', 30.12, "ABC", true, null]
+
+	document.write('첫번째 원소 : ' + array[0] + '<br>')
+	document.write('첫번째 원소 : ' + array[1] + '<br>')
+	document.write('첫번째 원소 : ' + array[2] + '<br>')
+	document.write('첫번째 원소 : ' + array[3] + '<br>')
+	document.write('첫번째 원소 : ' + array[4] + '<br>')
+	document.write('첫번째 원소 : ' + array[5] + '<br>')
+	document.write(`array배열의 원소의 개수 : ${ array.length }<br>`)
+	console.log(array)
+	
+	array[1] = ' '
+	array[10] = '!!'
+	console.log(array)
+	document.write('<hr>')
+	
+	for(let i = 0; i < array.length; i++) {
+		document.write(i + '번째 원소 : ' + array[i] + '<br>')
+	}
+	document.write('<hr>')
+	
+	for(let i in array) {
+		document.write(i + '번째 원소 : ' + array[i] + '<br>')
+	}
+	document.write('<hr>')
+	
+	for(let data of array) {
+		document.write(`${ data }<br>`)
+	}
+	
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body {
+		font-size : 25pt;
+	}
+</style>
+<script>
+	let array = [10, 20, 30, 40]
+//	let copyArray = array	// shallow copy
+
+	// deep copy
+	let copyArray = [...array]
+/*	
+	let copyArray = []
+	console.log(copyArray)
+	for(let data of array) {
+		copyArray.push(data)
+	}
+//	for(let i = 0; i < array.length; i++) {
+//		copyArray[i] = array[i]
+//	}
+*/	
+	document.write(`array : ${ array }<br>`)
+	document.write(`copyArray : ${ copyArray }<br>`)
+	
+	copyArray[2] = 1000
+	document.write(`array : ${ array }<br>`)
+	document.write(`copyArray : ${ copyArray }<br>`)
+</script>
+</head>
+<body>
+
+</body>
+</html>

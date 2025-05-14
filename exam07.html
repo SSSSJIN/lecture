@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function testFunction() {
+		alert('call')
+	}
+	
+	function testFunction(data) {
+		alert(`data : ${ data }`)
+	}
+	
+	function testFunction(a, b) {
+		alert(`a : ${ a }  b : ${ b }`)
+	}
+	
+	function testFunction() {
+	//	console.log(arguments)
+		switch(arguments.length) {
+		case 0 :
+			alert('call...')
+			break
+		case 1 :
+			alert(`data : ${ arguments[0] }`)
+			break
+		case 2 :
+			alert(`a : ${ arguments[0] }  b : ${arguments[1]} `)
+			break
+		}
+	}
+	
+	testFunction('A', 234)
+	testFunction(10)
+	testFunction()
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+

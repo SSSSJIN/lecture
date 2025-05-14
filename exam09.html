@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// 선언적 함수 선언
+	function aaa() {
+		alert('call aaa()')
+	}
+	
+	// 익명적 함수 선언
+	let bbb = function () {
+		alert('call bbb()')
+	}
+	
+	var ccc = function() {
+		alert('익명함수 ccc() 호출...')
+	}
+	
+	function ccc() {
+		alert('call ccc()')
+	}
+	
+	function callbackFunc(f) {
+		f()
+	}
+	
+	function returnFunc(name) {
+		let msg = `## ${ name }## `
+		return function() {
+			alert(`${msg}\n반갑습니다 ${name}님!!!`)
+		}
+	}
+	
+	let f = returnFunc('홍길동')
+	f()
+	
+	returnFunc('홍길순')()
+	
+	aaa()
+	bbb()
+	ccc()
+	callbackFunc(aaa)
+	callbackFunc(ccc)
+	
+	callbackFunc(function() {
+		alert('코드를 실행할까???')
+	})
+
+	
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

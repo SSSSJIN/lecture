@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var a = 10
+	let b = 20
+	const c = 30   // 값 변경 금지
+	
+	// a : 10, b : 20, c : 30
+	console.log('1) a : ' + a + ', b : ' + b + ', c : ' + c)
+	console.log(`2) a : ${ a }, b : ${ b }, c : ${ c }`)
+	
+	var a = 123
+//	let b = 345		// 재선언금지
+	//c = 567
+	console.log(`3) a : ${ a }, b : ${ b }, c : ${ c }`)
+	
+	{
+		let num = 10
+		let num2 = 20
+		console.log(`num : ${ num }  num2 : ${ num2 }`)
+	}
+	console.log(`num : ${ num }  num2 : ${ num2 }`)
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+

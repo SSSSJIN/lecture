@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function my_parse_int(data) {
+		data = String(data)
+		let num = 0
+		for(let i = 0; i < data.length && (data[i] >= '0' && data[i] <= '9'); i++) {
+			num = num * 10 + (data[i] - '0')
+		}
+		return num
+	}
+
+//	alert('확인버튼을 가지는 경고창')
+//	console.log(confirm('확인, 취소버튼을 가지는 경고창'))
+//	let age = parseInt(prompt('나이를 입력하세요'))
+	let result = my_parse_int('347.89ab')
+	console.log(result + "  typeof : " + typeof(result))
+</script>
+</head>
+<body>
+
+</body>
+</html>

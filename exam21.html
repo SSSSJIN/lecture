@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table {
+		width: 200px;
+		height: 150px;
+	}
+	table, tr, td {
+		border: 1px groove black;
+	}
+</style>
+<script>
+	window.onload = function() {
+//		let tags = document.getElementsByTagName("td")
+//		tags[0].innerHTML = '아이디'
+
+		let idTag = document.getElementById("id")
+		idTag.innerHTML = '아이디'
+		
+		document.getElementsByClassName("pwd")[0].innerText = '패스워드'
+	}
+</script>
+</head>
+<body>
+	<table >
+		<tr>
+			<td id="id">ID</td>
+		</tr>
+		<tr>
+			<td class="pwd">PASSWORD</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
