@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div, span, h1 {
+		margin: 10px;
+		padding: 10px;
+		border: 2px solid red;
+	}
+</style>
+<script>
+	window.onload = function() {
+		let div = document.querySelector('div')
+		let h1 = document.querySelector('h1')
+		let span = document.querySelector('span')
+		
+		let btn = document.querySelector('button')
+		btn.addEventListener('click', function() {
+			alert('btn click...')	
+		}, true)
+		
+		let spanTag = document.querySelector('#span')
+		spanTag.addEventListener('click', function() {
+			alert('span click...')
+		})
+		
+		div.addEventListener('click', function() {
+			alert('div click...')
+		})
+		
+		h1.addEventListener('click', function() {
+			alert('h1 click...')
+		})
+		
+		span.addEventListener('click', function() {
+			alert('span click...')
+		})
+		
+		/*
+		div.onclick = function() {
+			alert('div click...')
+		}
+		
+		h1.onclick = function(e) {
+			alert('h1 click...')
+			console.log(e)
+			e.cancelBubble = true
+		}
+		
+		span.onclick = function() {
+			alert('span click...')
+		}*/
+	}
+</script>
+</head>
+<body>
+	<div>
+		<h1>
+			<span>Hello</span>
+		</h1>
+	</div>
+	<button><span id="span">CLICK</span></button>
+	<input type="button" value="클릭하세요">
+	<hr>
+	<form action="test.html" method="post">
+		ID : <input type="text" name="id"><br>
+		PASSWORD : <input type="password" name="pwd"><br>
+		<input type="submit" value="로그인">
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+

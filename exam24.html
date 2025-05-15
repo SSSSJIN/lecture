@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table {
+		width: 200px;
+		height: 150px;
+	}
+	table, tr, td {
+		border: 1px groove black;
+	}
+</style>
+<script>
+	let idTag
+	window.onload = function() {
+		let idTag = document.querySelector('#id')	
+//		idTag.parentNode.removeChild(idTag)
+		idTag.remove()
+		
+		let pwdTag = document.querySelector('.pwd')
+		pwdTag.style.color = 'red'
+		pwdTag.style.border = '2px dotted blue'
+		pwdTag.style['font-size'] = '20pt'		//pwdTag.style.fontSize = '20pt' 
+		pwdTag.style.backgroundColor = 'yellow'
+		
+		/* 고전적 이벤트모델 */
+		let btn = document.querySelector('#btn02')
+		btn.onclick = function() {
+			alert('click!!!!')
+		}
+		
+		/* 
+			표준 이벤트모델
+			addEventListener(이벤트속성, handler, capturing여부)
+		*/
+		let btn3 = document.getElementById("btn03")
+		btn3.addEventListener('click', function() {
+			alert('btn click...')
+		})
+	}
+</script>
+</head>
+<body>
+	
+	<a href="#">새글등록</a>
+	<!-- 인라인 이벤트모델 -->
+	<button id="btn01" onclick="alert('click...')">버튼1</button>
+	<button id="btn02">버튼2</button>
+	<button id="btn03">버튼3</button>
+
+	<table >
+		<tr>
+			<td id="id">ID</td>
+		</tr>
+		<tr>
+			<td class="pwd" >PASSWORD</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
