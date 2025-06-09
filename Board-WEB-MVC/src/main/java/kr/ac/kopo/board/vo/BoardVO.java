@@ -12,13 +12,6 @@ public class BoardVO {
 	public BoardVO() {
 	}
 
-	public BoardVO(String title, String writer, String content) {
-		super();
-		this.title = title;
-		this.writer = writer;
-		this.content = content;
-	}
-
 	public BoardVO(int no, String title, String writer, String content, int viewCnt, String regDate) {
 		super();
 		this.no = no;

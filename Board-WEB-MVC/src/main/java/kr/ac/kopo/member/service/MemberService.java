@@ -8,8 +8,8 @@ public class MemberService {
 
 	private MemberDAO memberDao;
 	
-	public MemberService() {
-		memberDao = new MemberDAOImpl();
+	public MemberService(MemberDAO memberDao) {
+		this.memberDao = memberDao;
 	}
 
 	public MemberVO login(MemberVO member) throws Exception {

@@ -52,9 +52,7 @@
 				</c:forEach>		
 			</table>
 			<br>
-			<c:if test="${ not empty userVO }">
-				<button id="addBtn">새글등록</button>
-			</c:if>
+			<button id="addBtn">새글등록</button>
 		</div>
 	</section>
 	<footer>

@@ -2,6 +2,7 @@ package kr.ac.kopo.board.controller;
 
 import java.util.List;
 
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import kr.ac.kopo.board.dao.BoardDAO;
@@ -12,11 +13,12 @@ import kr.ac.kopo.framework.annotation.RequestMapping;
 
 public class BoardController {
 
-	
 	@RequestMapping("/board/list.do")
 	public ModelAndView list(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		BoardDAO boardDao = new BoardDAOImpl();
+		ServletContext sc = request.getServletContext();
+		
+		BoardDAO boardDao = (BoardDAO)sc.getAttribute("boardDAO");
 		List<BoardVO> boardList = boardDao.selectBoardAll();
 		
 		ModelAndView mav = new ModelAndView();

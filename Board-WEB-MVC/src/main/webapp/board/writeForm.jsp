@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,8 +46,7 @@
 			<h2>새글등록</h2>
 			<hr>
 			<br>
-			<form name="wForm" action="/Board-WEB/board/write.do" method="post" onsubmit="return checkForm()">
-				<input type="hidden" name="writer" value="${ userVO.id }" />
+			<form name="wForm" action="write.jsp" method="post" onsubmit="return checkForm()">
 				<table style="width: 100%;">
 					<tr>
 						<th width="25%">제목</th>
@@ -56,9 +54,7 @@
 					</tr>
 					<tr>
 						<th width="25%">작성자</th>
-						<td><c:out value="${ userVO.id }" /></td>
-						
-						<%-- <td><input type="text" name="writer" value="${ userVO.id }" readonly> </td> --%>
+						<td><input type="text" name="writer"> </td>
 					</tr>
 					<tr>
 						<th>내용</th>

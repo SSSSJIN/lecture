@@ -15,6 +15,10 @@ import kr.ac.kopo.util.ConnectionFactory;
 
 public class BoardDAOImpl implements BoardDAO {
 
+	public BoardDAOImpl() {
+		System.out.println("BoardDAO 객체 생성....");
+	}
+	
 	@Override
 	public List<BoardVO> selectBoardAll() {
 		List<BoardVO> boardList = new ArrayList<>();
@@ -49,24 +53,7 @@ public class BoardDAOImpl implements BoardDAO {
 
 	@Override
 	public void insertBoard(BoardVO newBoard) {
-
-		StringBuilder sql = new StringBuilder();
-		sql.append("insert into tbl_board(no, title, writer, content) ");
-		sql.append(" values(seq_tbl_board_no.nextval, ?, ?, ?) ");
-		
-		try(
-			Connection conn = new ConnectionFactory().getConnection();
-			PreparedStatement pstmt = conn.prepareStatement(sql.toString());
-		) {
-			
-			pstmt.setString(1, newBoard.getTitle());
-			pstmt.setString(2, newBoard.getWriter());
-			pstmt.setString(3, newBoard.getContent());
-			
-			pstmt.executeUpdate();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
+		// TODO Auto-generated method stub
 		
 	}
 
