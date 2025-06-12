@@ -12,7 +12,29 @@
 
 	<context:component-scan base-package="kr.ac.kopo" />
     <mvc:annotation-driven />
+    	<mvc:message-converters>    	
+	    	<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+	    		<property name="supportedMediaTypes">
+	    			<list>
+	    				<value>text/html; charset=utf-8</value>
+	    			</list>
+	    		</property>    	
+	    	</bean>
+	    	<beans>
+	    	<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+	    			<property name="supportedMediaTypes">
+	    			<list>
+	    				<value>text/html; charset=utf-8</value>
+	    				<value>application/json; charset=utf-8</value>
+	    			</list>
+	    		</property>
+	    	</bean>
+	    	</beans>
+    	</mvc:message-converters>
 	<mvc:default-servlet-handler />
+	
+	<mvc:view-controller path="/joinForm.do" view-name="form/joinForm"/>
+	
 	<mvc:view-resolvers>
 		<mvc:jsp prefix="/WEB-INF/jsp/" suffix=".jsp" />
 	</mvc:view-resolvers>

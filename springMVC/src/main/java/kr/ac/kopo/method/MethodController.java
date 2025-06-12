@@ -6,21 +6,35 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+@RequestMapping("/method/method.do")
 @Controller
 public class MethodController {
 
+	public MethodController() {
+		System.out.println("MethodController 객체 생성....");
+	}
+
 //	@RequestMapping(value="/method/method.do", method=RequestMethod.GET)
-	@GetMapping("/method/method.do")
-	public void callGet() {
-		System.out.println(" GET방식 /method/method.do 요청발생!!!");
+//	@GetMapping("/method/method.do")
+	@GetMapping
+	public String callGet() {
+		return "method/methodForm";
 	}
 	
 //	@RequestMapping(value="/method/method.do", method=RequestMethod.POST)
-	@PostMapping("/method/method.do")
-	public void callPost() {
-		System.out.println(" POST방식 /method/method.do 요청발생!!!");
+//	@PostMapping("/method/method.do")
+	@PostMapping
+	public String callPost() {
+		return "method/methodProcess";
 	}
 	
-	
-	
 }
+
+
+
+
+
+
+
+
+
